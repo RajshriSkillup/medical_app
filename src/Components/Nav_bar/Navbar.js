@@ -1,25 +1,35 @@
-import React from "react";
-import "./Navbar.css";
+import React from 'react' 
 
-const Navbar = () => {
-  return (
-    <div class="navbar">
-    <div class="logo">
-      <span class="logo-text">StayHealthy</span>
-    </div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Appointments</a>
-      <a href="#">Health Blog</a>
-      <a href="#">Reviews</a>
-    </div>
-    <div class="action-buttons">
-      <button class="rounded-button">Sign Up</button>
-      <button class="rounded-button">Login</button>
-    </div>
-  </div>
-  );
-};
+import { Link } from 'react-router-dom' 
+
  
 
-export default Navbar;
+const Navbar = () => { 
+
+  return ( 
+
+    <div> 
+
+       <Link to="/login"> 
+
+                <button className="btn1">Login</button> 
+
+              </Link> 
+
+ 
+
+              <Link to="/signup"> 
+
+                <button className="btn1">SignUp</button> 
+
+              </Link> 
+
+    </div> 
+
+  ) 
+
+} 
+
+ 
+
+export default Navbar 
