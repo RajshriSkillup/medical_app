@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { API_URL } from '../../config';
 
-const SignUp = () => {
+const Sign_up = () => {
 
     const [name, setName] = useState('');
 
@@ -196,4 +196,4 @@ const SignUp = () => {
 
 }
 
-export default SignUp;
+export default Sign_up;

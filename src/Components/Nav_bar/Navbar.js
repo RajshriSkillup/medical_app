@@ -1,35 +1,135 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
  
 
 const Navbar = () => {
 
- return (
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-   <div>
+    const [showDropdown, setShowDropdown] = useState(false);
 
-      <Link to="/login">
+    const handleLogout = (e) => {
 
-               <button className="btn1">Login</button>
+      e.preventDefault()
 
-             </Link>
+        setIsLoggedIn(false);
+
+        sessionStorage.removeItem("email");
+
+        sessionStorage.removeItem("name");
+
+        sessionStorage.removeItem("phone");
+
+        sessionStorage.removeItem("auth-token");
+
+        window.location.reload();
+
+    }
+
+    const handleDropdown = () => {
+
+      setShowDropdown(!showDropdown);
+
+    }
+
+    useEffect(() => {
+
+      const storedemail = sessionStorage.getItem("email");
+
+      if (storedemail) {
+
+            setIsLoggedIn(true);
+
+          }
+
+        }, []);
+
+  return (
+
+    <nav>
+
+   {isLoggedIn?(
+
+          <>
+
+          <li onClick={handleDropdown}>
+
+            <p>Welcome, user</p>  
+
+            {showDropdown && (
+
+                <ul className="dropdown-menu">
+
+                  <li>
+
+                    <Link to="/profile">Your Profile</Link>
+
+                  </li>
+
+                  <li>
+
+                    <Link to="/reports">Your Reports</Link>
+
+                  </li>
+
+                </ul>
+
+              )}
+
+              </li>
+
+            <li className="link">
+
+              <button className="btn2" onClick={handleLogout}>
+
+                Logout
+
+              </button>
+
+            </li>
+
+           
+
+          </>
+
+        ) : (
+
+          <>
+
+            <li className="link">
+
+              <Link to="/signup">
+
+                <button className="btn1">Sign Up</button>
+
+              </Link>
+
+            </li>
+
+            <li className="link">
+
+              <Link to="/login">
+
+                <button className="btn1">Login</button>
+
+              </Link>
+
+            </li>
+
+          </>
+
+        )}
+
+   
+
+    </nav>
+
+  );
+
+};
 
  
 
-             <Link to="/signup">
-
-               <button className="btn1">SignUp</button>
-
-             </Link>
-
-   </div>
-
- )
-
-}
-
- 
-
-export default Navbar
+export default Navbar;

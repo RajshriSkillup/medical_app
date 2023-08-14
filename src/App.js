@@ -11,7 +11,8 @@ import Login from './Components/Login/Login';
 
 import Navbar from './Components/Nav_bar/Navbar';
 import { Landing_Page } from './Components/Landing_Page/Landing_Page';
-import SignUp from './Components/Sign_up/SignUp';
+
+import Sign_up from './Components/Sign_up/Sign_up';
 
 
 
@@ -33,7 +34,7 @@ function App() {
 
   <Route path='/login' element={<Login/>}/> 
 
-  <Route path='/signup' element={<SignUp/>}/> 
+  <Route path='/signup' element={<Sign_up/>}/> 
 
   {/* <Route path='/login' element={<Login/>}/> */} 
 
