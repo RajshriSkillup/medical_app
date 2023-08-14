@@ -8,8 +8,12 @@ import './App.css';
 
 
 import Login from './Components/Login/Login';
-import SignUp from './Components/Sign_up/sign_up';
+
 import Navbar from './Components/Nav_bar/Navbar';
+import { Landing_Page } from './Components/Landing_Page/Landing_Page';
+import SignUp from './Components/Sign_up/SignUp';
+
+
 
  
 
@@ -25,7 +29,7 @@ function App() {
 
 <Routes> 
 
-<Route path='/' element={<h1>hello</h1>}/> 
+<Route path='/' element={<Landing_Page/>}/>
 
   <Route path='/login' element={<Login/>}/> 
 
