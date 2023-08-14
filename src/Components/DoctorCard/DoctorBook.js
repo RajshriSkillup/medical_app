@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import  FindDoctor from '../FindDoctorSearch/FindDoctorSearch';
 import DoctorCard from './DoctorCard';
 
+
 const DoctorBook = () => {
     const [searchParams] = useSearchParams();
     const [doctors, setDoctors] = useState([]);
