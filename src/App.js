@@ -7,6 +7,7 @@ import Sign_up from './Components/Sign_up/Sign_up';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import DoctorBook from './Components/DoctorCard/DoctorBook';
 import Notification from './Components/Notification/Notification';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 
 
@@ -32,6 +33,7 @@ function App() {
   <Route path='/signup' element={<Sign_up/>}/> 
   <Route path='/finddoctor' element={<FindDoctorSearch/>}/>
   <Route path="/search/doctors" element={<DoctorBook/>} />
+  <Route path='/review' element={<ReviewForm/>}/> 
 
   {/* <Route path='/login' element={<Login/>}/> */} 
 
