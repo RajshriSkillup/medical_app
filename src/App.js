@@ -6,6 +6,7 @@ import { Landing_Page } from './Components/Landing_Page/Landing_Page';
 import Sign_up from './Components/Sign_up/Sign_up';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import DoctorBook from './Components/DoctorCard/DoctorBook';
+import Notification from './Components/Notification/Notification';
 
 
 
@@ -20,6 +21,7 @@ function App() {
 <BrowserRouter> 
 
 <Navbar/> 
+<Notification>
 
 <Routes> 
 
@@ -38,6 +40,7 @@ function App() {
  
 
 </Routes> 
+</Notification>
 
 </BrowserRouter> 
 
