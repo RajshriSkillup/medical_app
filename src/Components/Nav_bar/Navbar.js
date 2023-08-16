@@ -27,13 +27,13 @@ const Navbar = () => {
         window.location.reload();
 
     }
+    const handleDropdown = () => { 
 
-    const handleDropdown = () => {
+        setShowDropdown(!showDropdown); 
+  
+      } 
 
-      setShowDropdown(!showDropdown);
-
-    }
-
+   
     useEffect(() => {
 
       const storedemail = sessionStorage.getItem("email");

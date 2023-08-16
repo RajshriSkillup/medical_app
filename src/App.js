@@ -9,6 +9,8 @@ import DoctorBook from './Components/DoctorCard/DoctorBook';
 import Notification from './Components/Notification/Notification';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
+import ProfileForm from './Components/ProfileCard/ProfileForm';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 
 
 
@@ -37,6 +39,8 @@ function App() {
   <Route path="/search/doctors" element={<DoctorBook/>} />
   <Route path='/review' element={<ReviewForm/>}/>
   <Route path='/instant-consultation' element={<InstantConsultation/>}/>
+  <Route path='/profile' element={<ProfileForm/>} />
+  <Route path='/reports' element={<ReportsLayout/>} />
   {/* <Route path='/login' element={<Login/>}/> */} 
 
 
