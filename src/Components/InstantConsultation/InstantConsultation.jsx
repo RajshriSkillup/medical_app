@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './InstantConsultation.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import FindDoctorSearchIC from './FindDoctorSearchIC/FindDoctorSearchIC';
+//import DoctorCardIC from './DoctorCardIC/DoctorCardIC';
+import DoctorCardIC from './DoctorCardIC/DoctorCardIC';
 
-import FindDoctorSearch from '../FindDoctorSearch/FindDoctorSearch';
-import DoctorCard from '../DoctorCard/DoctorCard';
 const InstantConsultation = () => {
     const [searchParams] = useSearchParams();
     const [doctors, setDoctors] = useState([]);
@@ -11,9 +12,11 @@ const InstantConsultation = () => {
     const [isSearched, setIsSearched] = useState(false);
     
     const getDoctorsDetails = () => {
-        // fetch(`https://api.npoint.io/daf45df3013b48a61a25`)
+        //fetch(`https://api.npoint.io/daf45df3013b48a61a25`)
+        fetch(`https://api.npoint.io/e3c6cc64bf013781f538/doctors`)
+
         // fetch('../../api-data/doctors.json')
-        fetch('http://localhost:8181/doctors')
+        // fetch('http://localhost:8181/doctors')
         .then(res => res.json())
         .then(data => {
             if (searchParams.get('speciality')) {
@@ -63,14 +66,14 @@ const InstantConsultation = () => {
     return (
         <center>
             <div  className="searchpage-container">
-            <FindDoctorSearch onSearch={handleSearch} />
+            <FindDoctorSearchIC onSearch={handleSearch} />
             <div className="search-results-container">
             {isSearched ? (
                 <center>
                     <h2>{filteredDoctors.length} doctors available in {searchParams.get('location')}</h2>
                     <h3>Book appointments with minimum wait-time & verified doctor details</h3>
                     {filteredDoctors.length > 0 ? (
-                    filteredDoctors.map(doctor => <DoctorCard className="doctorcard" {...doctor} key={doctor.name} />)
+                    filteredDoctors.map(doctor => <DoctorCardIC className="doctorcard" {...doctor} key={doctor.name} />)
                     ) : (
                     <p>No doctors found.</p>
                     )}

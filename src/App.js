@@ -12,6 +12,7 @@ import InstantConsultation from './Components/InstantConsultation/InstantConsult
 
 
 
+
  
 
  
@@ -35,7 +36,7 @@ function App() {
   <Route path='/finddoctor' element={<FindDoctorSearch/>}/>
   <Route path="/search/doctors" element={<DoctorBook/>} />
   <Route path='/review' element={<ReviewForm/>}/>
-    <Route path='/instant' element={<InstantConsultation/>}/>
+  <Route path='/instant-consultation' element={<InstantConsultation/>}/>
   {/* <Route path='/login' element={<Login/>}/> */} 
 
 
