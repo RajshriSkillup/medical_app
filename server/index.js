@@ -8,7 +8,7 @@ let multer=require('multer')
 app.set('view engine','ejs')
 app.use(express.static('public'))
 
-const PORT = process.env.PORT || 8181;
+const PORT = process.env.PORT || 8183;
 const doctorsDetail=require('./models/doctors')
 
 
