@@ -11,7 +11,7 @@ const passport = require('passport');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const JWT_SECRET = process.env.JWT_SECRET || "DGKLDFJGLKDFGLKDFJGKLDFJGKLDJSGLDSHIDBCXMNFKDLGJLDGJLKDFJGDKFLHJLKD";
+const JWT_SECRET = process.env.JWT_SECRET || 'thisiscodeformediclapplicationwhich isbuiltinreactappproject';
 
 router.use(session({
     secret: 'keyboard cat',
