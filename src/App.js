@@ -13,12 +13,6 @@ import ProfileForm from './Components/ProfileCard/ProfileForm';
 import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 
 
-
-
- 
-
- 
-
 function App() { 
 
   return ( 
